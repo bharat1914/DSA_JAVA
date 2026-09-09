@@ -14,13 +14,13 @@ public class Binary_search {
 		while(l<=r) {
 			
 			mid=(l+r)/2;
-			
-			if(a[mid]==t) {
+			int comp = a[mid].compareTo(t);
+			if(comp==0) {
 				System.out.println("found at "+mid);
 				return;
 			}
 			
-			else if(a[mid].charAt(0)>t.charAt(0)) {
+			else if(comp>0) {
 				r=mid-1;
 			}
 			else {
